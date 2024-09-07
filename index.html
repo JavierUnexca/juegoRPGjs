@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>efectoDeSonidos/
+<body>
+    <audio id="musicaMedieval" lop>
+        <source src="items/efectoDeSonidos/medieval-background.mp3">
+        <source src="items/efectoDeSonidos/medieval-background.ogg">
+        <source src="items/efectoDeSonidos/medieval-background.wav">
+    </audio>
+    
+    <div id="confirmGame">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="items/quieresJugar.png" alt="quieresJugar.png" width =250
+                    height=150 style="border-radius: 1rem;">
+                </div>
+                <div class="flip-card-back">
+                    <img src="items/APURATE.jpg" alt="apurate.jpg" width="250" height="150" style="border-radius: 1rem;">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="buttonA" onclick="confirmButtonTrue(); musicaPlay()">Si</button>
+            <button class="buttonB" onclick="confirmButtonFalse()">No</button>
+        </div>
+    </div>
+    
+    <div id="confirmName" style="display: none; margin-top: 300px;">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%; height: 30px;">
+            <div style="display: flex; justify-content: center; padding-top: 20px; background-color: #101219; width: 25%; height: 40px; border-radius: 20px;">
+                <div class="form__group field">
+                    <input type="text" class="form__field" id="suNombre" placeholder="Nombre" required="">
+                    <label for="name" class="form__label">Escribe tu nombre</label>
+                </div>    
+            </div>
+            <div class="button-icon">
+                <div class="cube" style="margin-top: 20px;">
+                    <span class="side front">Guardar</span>
+                    <button class="side top" onclick="miName();ocultarDiv('confirmName');confirmArma()">Vamoooooos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmArma" style="display: none; margin-top: 40px;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="flip-card2">
+                <div class="flip-card-inner2">
+                    <div class="flip-card-front2">
+                        <img src="items/EligeTuArma.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                    <div class="flip-card-back2">
+                        <img src="items/muevete.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menuSeleccion">
+                <div class="contenedor">
+                    <img class="armas imagen" src="items/espada.png" alt="" width="200px" height="200px" onclick="espada();confirmArmadura();" style="margin: 20px;">
+                    <div class="burbuja">La espada esta equilibrada en ataque y probabilidad en acestar un golpe. Daña 20 y tiene un probabilidad del 45%</div>
+                </div>
+                <div class="contenedor">
+                    <img class="armas" src="items/arco.webp" alt="" width="200px" height="200px" onclick="arco();confirmArmadura()" style="margin: 20px;">
+                    <div class="burbuja">El arco y fleca hace poco daño pero tiene mayor probabilidad en acestar un golpe. Daña 15 y tiene un probabilidad del 75%</div>
+                </div>
+                <div class="contenedor">
+                    <img class="armas" src="items/hacha.webp" alt="" width="200px" height="200px" onclick="hacha();confirmArmadura()" style="margin: 20px;">
+                    <div class="burbuja">El hacha tiene un ataque brutal pero es muy lenta. Daña 35 y tiene un probabilidad del 30%</div>
+                </div>
+                </div>
+        </div>
+    </div>   
+
+    <div id="confirmArmadura" style="display: none; margin-top: 40px;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="flip-card2">
+                <div class="flip-card-inner2">
+                    <div class="flip-card-front2">
+                        <img src="items/armadura.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                    <div class="flip-card-back2">
+                        <img src="items/fuerza.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menuSeleccion">
+                <div class="contenedor">
+                    <img class="armas" src="items/madera.webp" alt="" width="200px" height="200px" onclick="madera();ocultarDiv('confirmArmadura');confirmColor()" style="margin: 20px;">
+                    <div class="burbuja">Esta armadura reduce 18 de ataque de tu rival y tiene una probabilidad del 36% de poder cubrirte y una probabilidad del 31% en esquivar</div>
+                </div>
+                <div class="contenedor">
+                    <img class="armas" src="items/hierro.webp" alt="" width="200px" height="200px" onclick="hierro();ocultarDiv('confirmArmadura');confirmColor()" style="margin: 20px;">
+                    <div class="burbuja">Esta armadura reduce 32 de ataque de tu rival y tiene una probabilidad del 58% de poder cubrirte y una probabilidad del 10% en esquivar</div>
+                </div>
+                <div class="contenedor">
+                    <img class="armas" src="items/desnudo.jpg" alt="" width="200px" height="200px" onclick="desnudo();ocultarDiv('confirmArmadura');confirmColor()" style="margin: 20px;">
+                    <div class="burbuja">Esta armadura reduce 5 de ataque de tu rival y tiene una probabilidad del 10% de poder cubrirte y una probabilidad del 60% en esquivar</div>  
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div id="confirmColor" style="display: none; margin-top: 40px;">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="flip-card2">
+                <div class="flip-card-inner2">
+                    <div class="flip-card-front2">
+                        <img src="items/eligeColor.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                    <div class="flip-card-back2">
+                        <img src="items/vamos.jpg" alt="apurate.jpg" width="350" height="200" style="border-radius: 1rem;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menuSeleccion">
+                <span class="cardColor"  width="200px" height="200px" onclick="color(1);ocultarDiv('confirmColor')" style="margin: 20px; background-color: #1094ec;"></span>
+                <span class="cardColor"  width="200px" height="200px" onclick="color(2);ocultarDiv('confirmColor')" style="margin: 20px; background-color: #17c70a;"></span>
+                <span class="cardColor"  width="200px" height="200px" onclick="color(3);ocultarDiv('confirmColor')" style="margin: 20px; background-color: #9c0bc8;"></span>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="confirmBody" style="display: none;">
+<div class="mecanicasGame">
+<div class="Big-box">
+<div class="Game">
+    <div class="content-1">
+        <h1>Jugador: </h1>
+        <div id="name1"></div>
+    </div>
+
+    <div class="content-2">
+        <div class="box-1">
+            <h3 style="color:salmon ; margin-right:10px;">ATT: </h3> <div id="PlayerATT"></div>
+            <h3 style="color: rgb(12, 59, 12) ; margin-right:10px;">DEF: </h3> <div id="PlayerDEF"></div>
+            <h3 style="color: rgb(42, 42, 129); margin-right:10px;">HP: </h3> <div id="PlayerHP"></div>
+        </div>    
+        <div class="box-2">
+            <div class="content-1" style="margin-bottom: -20;">
+                <h4 style="margin-right:10px ;">Tu Arma Es: </h4>
+                <div id="armaName1"></div>
+            </div>
+            <div class="content-1" style="margin-top: -10;">
+                <h4 style="margin-right:10px ;">Tu Armadura Es: </h4>
+                <div id="armaduraName1"></div>
+            </div>
+        </div>
+
+        <div class="box-3">
+            <button class="boton button-with-icon" onclick="ataque();hpPersonajePc()"><img class="icon" src="items/iconSvg/rpg.png" alt=""><p class="text">Atacar</p></button>
+            <button id="buttonCubrirse" class="boton boton button-with-icon" onclick="defenderse()"><img class="icon" src="items/iconSvg/juego.png" alt=""><p class="text">Cubrirme</p></button>
+            <button id="buttonEsquivar" class="boton boton button-with-icon" onclick="esquivar()"><img class="icon" src="items/iconSvg/ala.png" alt=""><p class="text">Esquivar</p></button>
+        </div>
+    </div>
+</div> 
+
+<div class="Game">
+    <div class="content-1">
+        <h1>Jugador: PC</h1>
+    </div>
+
+    <div class="content-2">
+        <div class="box-1">
+            <h3 style="color:salmon ; margin-right:10px;">ATT: </h3> <div id="pcATT"></div>
+            <h3 style="color: rgb(12, 59, 12) ; margin-right:10px;">DEF: </h3> <div id="pcDEF"></div>
+            <h3 style="color: rgb(42, 42, 129); margin-right:10px;">HP: </h3> <div id="pcHP"></div>
+        </div>    
+        <div class="box-2">
+            <div class="content-1" style="margin-bottom: -20;">
+                <h4 style="margin-right:10px ;">Tu Arma Es: </h4>
+                <div id="armaName2"></div>
+            </div>
+            <div class="content-1" style="margin-top: -10;">
+                <h4 style="margin-right:10px ;">Tu Armadura Es: </h4>
+                <div id="armaduraName2"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</div>
+<div class="personajes">
+    <div class="personajeJugador" id="playerHp100" ><img  src="items/Personaje/playerHP100.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="personajeJugador" id="playerHp80" style="display: none;"><img src="items/Personaje/playerHP80.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="personajeJugador" id="playerHp50" style="display: none;"><img src="items/Personaje/playerHP50.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="personajeJugador" id="playerHp20" style="display: none;"><img src="items/Personaje/playerHP20.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="consola" id="mensaje5"></div>   
+    <div class="personajePc" id="pcHp100"><img src="items/Personaje/pcHP100.webp" alt="" width="250px" height="250px" style="margin-left:  10px;"></div>
+    <div class="personajePc" id="pcHp80" style="display: none;"><img src="items/Personaje/pcHP80.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="personajePc" id="pcHp50" style="display: none;"><img src="items/Personaje/pcHP50.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+    <div class="personajePc" id="pcHp20" style="display: none;"><img src="items/Personaje/pcHP20.jpeg" alt="" width="250px" height="250px" style="margin-right: 10px;"></div>
+</div>
+</div>
+<script src="codigo.js"></script>
+<!-- Material externo:
+Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=89801">Pixabay</a>
+
+Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14780">Pixabay</a>
+
+Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7017">Pixabay</a>
+
+Sound Effect by <a href="https://pixabay.com/es/users/floraphonic-38928062/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=234628">floraphonic</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=234628">Pixabay</a>
+
+Sound Effect by <a href="https://pixabay.com/es/users/dennish18-26151496/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=146419">Dennis</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=146419">Pixabay</a>
+
+Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=44724">Pixabay</a>
+
+Music by <a href="https://pixabay.com/es/users/lucafrancini-19914739/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=196571">Luca Francini</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=196571">Pixabay</a>
+-->
+</body>
+</html>
