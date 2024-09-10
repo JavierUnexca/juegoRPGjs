@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
 }
 .Game{
-    margin: 50px;
+    margin: 15px;
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     background-color: rgba(13, 9, 26, 0.785);
@@ -129,7 +129,7 @@ transition: all 0.5s ease-in-out;
 #mensaje5{
     border: solid 2px black;
     overflow-y: auto;
-    height: 250px;
+    height: 200px;
     width: 400px;
 }
 #confirmGame{
@@ -410,6 +410,15 @@ filter: brightness(.8);
     max-width: 180px;
     margin-top: 200px;
 }
+.from_input{
+    display: flex; 
+    justify-content: center; 
+    padding-top: 20px; 
+    background-color: #101219; 
+    width: 25%; 
+    height: 40px; 
+    border-radius: 20px;
+}
 .form__field {
     font-family: inherit;
     width: 100%;
@@ -427,7 +436,8 @@ filter: brightness(.8);
 .form__field:placeholder-shown ~ .form__label {
     font-size: 17px;
     cursor: text;
-    top: 340px;
+    top: 320px;
+    margin-left: 10px;
 }
 .form__label {
     position: absolute;
@@ -517,13 +527,16 @@ transform: translate3d(0, 0, 1em);
     display: flex; justify-content: center;
 }
 .consola{
-    margin:0 10px; 
+    margin:0 5px; 
     background-color: 
     white;
 }
 
 /* RESOLUCCION 720 X 1024 ///////////////////////////////////////////////////////////*/
 @media (max-width: 720px){
+    body{
+    width: 100%;
+    }
     .form__field,.form__label {
     margin-left: 20px;
 }
@@ -549,6 +562,9 @@ transform: translate3d(0, 0, 1em);
     flex-wrap: wrap;
     justify-content: center;
 }
+#mensaje5{
+    width: 100%;
+}
 .consola{
     margin:10px; 
     order: 1;
@@ -561,3 +577,23 @@ transform: translate3d(0, 0, 1em);
 }
 }
 /* RESOLUCCION 720 X 1024 ///////////////////////////////////////////////////////////*/
+/* RESOLUCCION 600 X 1024 ///////////////////////////////////////////////////////////*/
+@media (max-width: 600px){
+    .from_input{
+        width: 40%;
+    }
+    .content-2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box-1{
+        order: 1;
+    }
+    .box-2{
+        order: 2;
+    }
+    .box-3{
+        order: 3;
+    }
+}
+/* RESOLUCCION 600 X 1024 ///////////////////////////////////////////////////////////*/
