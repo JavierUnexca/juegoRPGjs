@@ -536,6 +536,7 @@ transform: translate3d(0, 0, 1em);
 @media (max-width: 720px){
     body{
     width: 100%;
+    height: 100%;
     }
     .form__field,.form__label {
     margin-left: 20px;
@@ -598,11 +599,7 @@ transform: translate3d(0, 0, 1em);
 }
 /* RESOLUCCION 600 X 1024 ///////////////////////////////////////////////////////////*/
 /* RESOLUCCION 360 X 1024 ///////////////////////////////////////////////////////////*/
-@media (max-width: 360px){
-    body{
-        height: 100%;
-    }
-    
+@media (max-width: 350px){
     .box-1{
         margin-top: 30px;
         height: 140px;
