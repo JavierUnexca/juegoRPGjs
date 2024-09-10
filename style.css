@@ -599,7 +599,25 @@ transform: translate3d(0, 0, 1em);
 /* RESOLUCCION 600 X 1024 ///////////////////////////////////////////////////////////*/
 /* RESOLUCCION 360 X 1024 ///////////////////////////////////////////////////////////*/
 @media (max-width: 360px){
+    body{
+        height: 100%;
+    }
+    
+    .box-1{
+        margin-top: 30px;
+        height: 140px;
+    }
+    .box-2{
+        height: 80px;
+        margin-top: 30px;
+    }
+    .content-1{
+        height:20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
     .from_input{
         width: 80%;
     } 
 }
+/* RESOLUCCION 360 X 1024 ///////////////////////////////////////////////////////////*/
