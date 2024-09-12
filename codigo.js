@@ -36,6 +36,15 @@ let colorConsole = 0;
 let colorConsolePC = 4;
 
 
+//FUNCIONE DE LOADING// 
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const paginaWeb = document.getElementById('paginaWeb');
+    loader.style.display = 'none';
+    paginaWeb.style.display = 'block';
+});
+//FUNCIONE DE LOADING// 
+
 // Variable de musica
 function musicaPlay(){//Musica de fondo
     document.getElementById('musicaMedieval').play();

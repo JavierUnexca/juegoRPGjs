@@ -1,8 +1,43 @@
-body{
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.paginaWeb{
+    display: none;
+}
+.fondoB{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-image: url("items/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;
+    z-index: -1
 }
 .Game{
     margin: 15px;
